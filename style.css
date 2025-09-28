@@ -1,0 +1,92 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  background: linear-gradient(135deg, #f2e8dc, #ded1b7);
+  color: #5b4636;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #fbf5e9;
+  padding: 40px 40px 20px;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #6a5038;
+}
+
+main {
+  max-width: 900px;
+  margin: 60px auto 80px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.intro-section {
+  background: #fbf5e9;
+  border: 2px solid #c9b284;
+  padding: 15px;
+  border-radius: 20px;
+}
+.intro-section h2 { text-align: center; font-weight: 700; font-size: 2rem; margin-bottom: 22px; color: #5b4636; }
+.intro-section p { font-family: 'Special Elite', monospace; font-size: 1.05rem; margin-bottom: 28px; line-height: 1.5; }
+
+.quiz-options { display: flex; justify-content: space-between; gap: 24px; }
+.quiz-option {
+  flex: 1; min-width: 240px; background: #fbf5e9; padding: 28px 30px;
+  border: 2px solid #c9b284; border-radius: 20px; cursor: pointer; display: flex; flex-direction: column;
+  transition: transform 0.25s ease;
+}
+.quiz-option:hover { transform: translateY(-6px); }
+.quiz-option h3 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 1.85rem; margin-bottom: 12px; color: #5a4527; }
+.quiz-option p { font-family: 'Special Elite', monospace; font-size: 1.15rem; color: #6a5d37; line-height: 1.43; }
+
+@media (max-width: 840px) { .quiz-options { flex-direction: column; gap: 32px; } }
+@media (max-width: 450px) {
+  header { font-size: 3rem; padding: 28px 20px 16px; }
+  .intro-section h2 { font-size: 2rem; }
+  .intro-section p, .quiz-option p { font-size: 1rem; }
+  .quiz-option h3 { font-size: 1.4rem; }
+}
+
+.container {
+  background: #fbf5e9; border-radius: 18px; max-width: 580px; width: 100%;
+  padding: 42px 50px; text-align: center; border: 2px solid #c9b284; margin: 40px auto; display: none; color: #5b4636;
+}
+.container.active { display: block; }
+
+h1.quiz-title { font-family: 'Merriweather', serif; font-weight: 700; font-size: 2.3rem; margin-bottom: 30px; color: #6a5038; }
+
+button.primary {
+  font-family: 'Special Elite', monospace; font-size: 1.1rem; font-weight: 700;
+  background: #c5b783; border: 2px solid #8b7f5b; color: #4b3e26; padding: 12px 38px; border-radius: 12px;
+  cursor: pointer; margin-top: 15px;
+}
+
+.progress-bar { height: 12px; background: #dcd4be; border-radius: 9px; margin-bottom: 34px; }
+.progress-bar-inner { height: 100%; background: #9c885e; width: 0; border-radius: 9px 0 0 9px; transition: width 0.5s ease; }
+
+.question { font-weight: 700; font-size: 1.35rem; margin-bottom: 28px; text-align: center; }
+.options { text-align: left; margin-bottom: 36px; }
+label {
+  display: flex; align-items: center; background: #f6efd8; border-radius: 12px;
+  border: 2px solid transparent; padding: 16px 20px; margin-bottom: 16px; cursor: pointer;
+  font-family: 'Special Elite', monospace; font-size: 1.05rem; color: #6b5538;
+}
+input[type="radio"], input[type="checkbox"] { margin-right: 20px; width: 22px; height: 22px; }
+.blank-input { font-family: 'Special Elite', monospace; font-size: 1.05rem; padding: 12px 16px; border-radius: 12px; border: 2px solid #c9b284; width: 100%; margin-bottom: 36px; }
+
+.result-details { text-align: left; margin-top: 10px; border-top: 2px solid #d3cba3; padding-top: 22px; letter-spacing: 0.02em; font-family: 'Special Elite', monospace; }
+.result-question { font-weight: 700; font-size: 1.15rem; color: #5b4636; margin-bottom: 6px; text-align: left; }
+.answer { margin-left: 0; margin-bottom: 12px; font-family: 'Special Elite', monospace; font-size: 1rem; color: #704f24; text-align: left; display: block; }
+.correct { color: #5ebb4a; font-weight: 700; }
+.incorrect { color: #d31010; font-weight: 700; }
+
+.closing-screen p { font-family: 'Special Elite', monospace; font-size: 1.15rem; margin-bottom: 30px; font-style: italic; color: #5b4636; }
