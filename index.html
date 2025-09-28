@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>General Knowledge Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>General Knowledge Quiz</header>
+
+<main id="home-screen">
+  <section class="intro-section">
+    <h2>Welcome!</h2>
+    <p>Sharpen your mind and broaden your horizons with our elegantly designed general knowledge quizzes.</p>
+    <p>Choose from single choice, multi-select, or fill-in-the-blank quizzes and prove your mastery.</p>
+  </section>
+
+  <section class="quiz-options">
+    <button type="button" class="quiz-option" data-type="single">
+      <h3>Single Select Quiz</h3>
+      <p>Select the one correct answer out of multiple choices.</p>
+    </button>
+    <button type="button" class="quiz-option" data-type="multi">
+      <h3>Multi Select Quiz</h3>
+      <p>Choose all correct answers in each question.</p>
+    </button>
+    <button type="button" class="quiz-option" data-type="fillblank">
+      <h3>Fill In The Blanks Quiz</h3>
+      <p>Type the correct answer to complete the sentence.</p>
+    </button>
+  </section>
+</main>
+
+<section class="container" id="quiz-screen">
+  <h1 class="quiz-title" id="quiz-title"></h1>
+  <div class="progress-bar"><div class="progress-bar-inner" id="progress-bar-inner"></div></div>
+  <div id="question-container"></div>
+  <button class="primary" id="next-btn" disabled>Next</button>
+</section>
+
+<section class="container" id="result-screen">
+  <h1>Your Score</h1>
+  <p id="score-text"></p>
+  <div id="results-details"></div>
+  <button class="primary" id="finish-btn">Finish</button>
+</section>
+
+<section class="container closing-screen" id="closing-screen">
+  <h1>Thank you for playing!</h1>
+  <p>We hope you enjoyed the quiz. Feel free to try again anytime.</p>
+  <button class="primary" id="restart-btn">Try Again</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
